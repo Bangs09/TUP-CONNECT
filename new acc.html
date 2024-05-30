@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="reg_styleshit.css">
+    <script src="https://kit.fontawesome.com/02a76e6cca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="form-box">
+    <h1>Registration Form</h1>
+    <form class="form" id="regForm" name="regForm">
+        <div class="input-group">
+
+                <i class="fa-solid fa-user"></i>
+                <input id="name" name="user" type="text" placeholder="USERNAME" class="input-field">
+
+                <i class="fa-solid fa-id-card"></i>
+                <input id="ID" name="id" type="text" placeholder="TUP-ID" class="input-field">
+        </div>
+
+        <div class="input-group2">
+
+                <i class="fa-solid fa-key"></i>
+                <input id="password" name="password" type="password" placeholder="PASSWORD" class="input-field">
+                
+                <i class="fa-solid fa-building-user"></i>
+                <select class="input-field" name="college-dept" id="department">
+                    <option hidden value="0">-Select Department-</option>
+                    <option value="COLLEGE OF INDUSTRIAL TEACHNOLOGY">COLLEGE OF INDUSTRIAL TEACHNOLOGY</option>
+                    <option value="COLLEGE OF INDUSTRIAL EDUCATION">COLLEGE OF INDUSTRIAL EDUCATION</option>
+                    <option value="COLLEGE OF ENGINEERING">COLLEGE OF ENGINEERING</option>
+                    <option value="COLLEGE OF LIBERAL ARTS">COLLEGE OF LIBERAL ARTS</option>
+                    <option value="COLLEGE OF SCIENCE">COLLEGE OF SCIENCE</option>
+                    <option value="COLLEGE OF ARCHITECTURE & FINE ARTS">COLLEGE OF ARCHITECTURE & FINE ARTS</option>
+                </select>
+
+        </div>
+
+        <div class="input-line3">
+            <select onchange="toggleInput()" class="input-line" name="user-admin" id="type">
+                <option hidden value="0">-Select Option-</option>
+                <option value="STUDENT">STUDENT</option>
+                <option value="STUDENT LEADER">STUDENT LEADER</option>
+            </select>
+
+        </div>
+
+        <div>
+            <button name="submit"  class="btn-field" type="button" id="submit" onclick="replaceContent()">SUBMIT</button>
+            <button hidden name="next-admin" class="btn-field" type="button" id="next" onclick="replaceContent()">NEXT</button>
+        </div>
+    </form>
+</div>
+
+
+<script>
+
+let submit = document.getElementById("submit");
+let next = document.getElementById("next");
+
+next.onclick = function replaceContent() {
+        var url = "orginfo.html";
+        window.location.href = url;
+    }
+
+
+submit.onclick = function replaceContent() {
+        var url = "log-in.html";
+        window.location.href = url;
+    }
+
+function toggleInput() {
+    var selectElement = document.getElementById("type");
+    var button = document.getElementById("submit");
+    var button2 = document.getElementById("next");
+    if (selectElement.value === "STUDENT LEADER") {
+        button.hidden = true;
+        button2.hidden = false;
+    } else {
+        button.hidden = false;
+        button2.hidden = true;
+    }
+}
+
+</script>
+    
+</body>
+</html>

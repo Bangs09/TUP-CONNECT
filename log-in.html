@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/02a76e6cca.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img class="img" src="imgs/logo.png" alt="" width="1000" height="620">
+    </div>
+    <div class="formbox">
+        <img class="tuplogo" src="imgs/tup-logo.png" alt="" width="80" height="80">
+        <header>TUP-CONNECT</header>
+        <h1 id="title">WELCOME TUP'ians</h1>
+        <form>           
+            <div class="input-group">
+                <div class="input-field">
+                    <i class="fa-regular fa-user"></i>
+                    <input name="user" type="text" placeholder="USER NAME">
+                </div> 
+
+                <div class="input-field">
+                    <i class="fa-solid fa-id-card"></i>
+                    <input name="id" type="text" placeholder="TUP ID">
+                </div>               
+    
+                <div class="input-field">
+                    <i class="fa-solid fa-key"></i>
+                    <input name="password" type="password" placeholder="Password" id="password">
+                    <img src="imgs/close.png" id="eyeicon">
+                </div class="new">
+                <p>Forgot Password? &nbsp;<a href="forgotpass.html">Click here</a></p>
+
+                </div>
+                <div class="btn">
+                    <button name="log-in" class="button"  type="button" id="go" onclick="replaceContent()">LOG IN</button>
+                </div>
+                <div class="register">
+                    <a class="reg" href="new acc.html">REGISTER</a>
+                </div>
+            </div>
+        </form>  
+    </div>
+</div>
+
+<script>
+
+let title = document.getElementById("title");
+let eyeicon = document.getElementById("eyeicon");
+let password = document.getElementById("password");
+let go = document.getElementById("go");
+
+
+                eyeicon.onclick = function(){
+                    if(password.type == "password"){
+                        password.type = "text";
+                        eyeicon.src = "imgs/open.png";
+                    }else{
+                        password.type = "password"
+                        eyeicon.src = "imgs/close.png";
+                    }
+                }
+
+go.onclick = function replaceContent() {
+        var url = "index.html";
+        window.location.href = url;
+    }
+
+</script>
+    
+</body>
+</html>

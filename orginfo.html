@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORGANIZATION INFORMATION</title>
+    <link rel="stylesheet" href="org-info-style.css">
+    <script src="https://kit.fontawesome.com/02a76e6cca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="form-box">
+    <h1>Create Organization Page</h1>
+    <form class="form">
+        <div class="input-group">
+
+                <input name="org-name" id="org" class="input-line" type="text" placeholder="ORGANIZATION NAME">
+
+                <i class="fa-solid fa-users-line"></i>
+                <select class="input-field" name="type" id="type">
+                    <option hidden value="0">-ORGANIZATION TYPE-</option>
+                    <option disabled value="0.5">-Please Select-</option>
+                    <option value="1">ACADEMIC</option>
+                    <option value="2">SPORTS</option>
+                    <option value="3">E-Sports</option>
+                    <option value="4">CULTURAL</option>
+                    <option value="5">SOCIAL</option>
+                    <option value="6">NON-COLLEGE</option>
+                </select>
+        </div>
+
+        <div class="input-group2">
+            
+            <input name="#-info" id="contact" class="input-line" type="text" placeholder="CONTACT INFORMATION">
+            <input name="e-mail" id="mail" class="input-line" type="email" placeholder="E-MAIL">
+
+        </div>
+
+        <div class="selection">
+            <select class="input-field" name="department" id="department">
+                <option hidden value="0.0">-Organization Department-</option>
+                <option disabled value="0">SELECT</option>
+                <option value="COLLEGE OF INDUSTRIAL TEACHNOLOGY">CIT</option>
+                <option value="COLLEGE OF INDUSTRIAL EDUCATION">CIE</option>
+                <option value="COLLEGE OF ENGINEERING">COE</option>
+                <option value="COLLEGE OF LIBERAL ARTS">CLA</option>
+                <option value="COLLEGE OF SCIENCE">COS</option>
+                <option value="COLLEGE OF ARCHITECTURE & FINE ARTS">CAFA</option>
+            </select>
+        </div>
+
+        <div class="input-line3">
+
+            <textarea name="" id="" cols="30" rows="10" class="text-box"></textarea>
+             
+
+        </div>
+
+        <div>
+
+            <button name="reg-admin" class="btn-field" type="button" id="Enter" onclick="replaceContent()">SUBMIT</button>
+                
+        </div>
+    </form>
+</div>
+
+<script>
+
+let Enter = document.getElementById("Enter");
+
+Enter.onclick = function replaceContent() {
+        var url = "log-in.html";
+        window.location.href = url;
+    }
+
+
+</script>
+    
+</body>
+</html>
